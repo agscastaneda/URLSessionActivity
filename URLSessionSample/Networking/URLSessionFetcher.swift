@@ -18,16 +18,20 @@ final class URLSessionFetcher: Fetcher {
     }
     
     func fetchData<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
-        let request = urlRequestFactory.makeUrlRequest()
-        
-        // TODO: Handle server response errors.
-        let dataTask = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
-            guard let self = self, let data = data else { return completion(.failure(NetworkingServerErrors.dataNotFound)) }
-            completion(Result {
-                try self.decodableResultAdapter.mapModel(data: data)
-            })
+        do {
+            let request = try urlRequestFactory.make()
+            
+            // TODO: Handle server response errors.
+            let dataTask = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
+                guard let self = self, let data = data else { return completion(.failure(NetworkingServerErrors.dataNotFound)) }
+                completion(Result {
+                    try self.decodableResultAdapter.mapModel(data: data)
+                })
+            }
+            
+            dataTask.resume()
+        } catch {
+            completion(.failure(error))
         }
-        
-        dataTask.resume()
     }
 }
