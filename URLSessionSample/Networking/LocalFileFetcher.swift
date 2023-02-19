@@ -21,14 +21,14 @@ final class LocalFileFetcher: Fetcher {
     
     func fetchData<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
         guard let fileUrl = Bundle.main.url(forResource: fileName, withExtension: fileExtension) else {
-            return completion(.failure(DataNotFoundError()))
+            return completion(.failure(NetworkingServerErrors.dataNotFound))
         }
         
         guard let content = try? String(contentsOf: fileUrl, encoding: .utf8) else {
-            return completion(.failure(DataNotFoundError()))
+            return completion(.failure(NetworkingServerErrors.dataNotFound))
         }
     
-        guard let data = content.data(using: .utf8) else { return completion(.failure(DataNotFoundError())) }
+        guard let data = content.data(using: .utf8) else { return completion(.failure(NetworkingServerErrors.dataNotFound)) }
         completion(Result {
             try decodableResultAdapter.mapModel(data: data)
         })

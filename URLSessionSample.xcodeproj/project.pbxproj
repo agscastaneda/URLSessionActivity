@@ -14,7 +14,6 @@
 		D1878FAD299B76AB00CE97B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1878FAB299B76AB00CE97B0 /* LaunchScreen.storyboard */; };
 		D1878FB6299B770A00CE97B0 /* URLSessionFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FB5299B770A00CE97B0 /* URLSessionFetcher.swift */; };
 		D1878FB8299B771500CE97B0 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FB7299B771500CE97B0 /* Fetcher.swift */; };
-		D1878FBE299B77BC00CE97B0 /* DataNotFoundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FBD299B77BC00CE97B0 /* DataNotFoundError.swift */; };
 		D1878FC0299B77D600CE97B0 /* DecodableResultAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FBF299B77D600CE97B0 /* DecodableResultAdapter.swift */; };
 		D1878FC2299B77E100CE97B0 /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FC1299B77E100CE97B0 /* Saver.swift */; };
 		D1878FC5299B784000CE97B0 /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1878FC4299B784000CE97B0 /* URLRequestFactory.swift */; };
@@ -44,6 +43,8 @@
 		D1A9B581299EE103007D20DE /* DogsViewController+MenuTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */; };
 		D1A9B583299EF175007D20DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D1A9B582299EF175007D20DE /* README.md */; };
 		D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE130829A33628006622AE /* SimpleAlertFactory.swift */; };
+		D1DABE4529A1CE0A005A1353 /* NetworkingClientErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */; };
+		D1DABE4729A1CE1B005A1353 /* NetworkingServerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,6 @@
 		D1878FAE299B76AB00CE97B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1878FB5299B770A00CE97B0 /* URLSessionFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFetcher.swift; sourceTree = "<group>"; };
 		D1878FB7299B771500CE97B0 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
-		D1878FBD299B77BC00CE97B0 /* DataNotFoundError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundError.swift; sourceTree = "<group>"; };
 		D1878FBF299B77D600CE97B0 /* DecodableResultAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResultAdapter.swift; sourceTree = "<group>"; };
 		D1878FC1299B77E100CE97B0 /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
 		D1878FC4299B784000CE97B0 /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogsViewController+MenuTabController.swift"; sourceTree = "<group>"; };
 		D1A9B582299EF175007D20DE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1FE130829A33628006622AE /* SimpleAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertFactory.swift; sourceTree = "<group>"; };
+		D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClientErrors.swift; sourceTree = "<group>"; };
+		D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServerErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +180,8 @@
 		D1878FBC299B779A00CE97B0 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				D1878FBD299B77BC00CE97B0 /* DataNotFoundError.swift */,
+				D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */,
+				D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1878FA5299B76A700CE97B0 /* CatsViewController.swift in Sources */,
+				D1DABE4729A1CE1B005A1353 /* NetworkingServerErrors.swift in Sources */,
 				D1878FC0299B77D600CE97B0 /* DecodableResultAdapter.swift in Sources */,
 				D1878FC9299B7ABE00CE97B0 /* Cat.swift in Sources */,
 				D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */,
@@ -341,7 +345,6 @@
 				D1A9B56A299E0DAF007D20DE /* DogsViewController.swift in Sources */,
 				D1878FD2299C465100CE97B0 /* CatsServiceImp.swift in Sources */,
 				D1878FC5299B784000CE97B0 /* URLRequestFactory.swift in Sources */,
-				D1878FBE299B77BC00CE97B0 /* DataNotFoundError.swift in Sources */,
 				D1878FD4299C659A00CE97B0 /* JSONDecoderResultAdapter.swift in Sources */,
 				D1878FD8299C65F000CE97B0 /* UserDefaultsSaver.swift in Sources */,
 				D1A9B57D299E14D2007D20DE /* CatsURLRequestFactory.swift in Sources */,
@@ -357,6 +360,7 @@
 				D1878FCD299C461D00CE97B0 /* CatViewData.swift in Sources */,
 				D1878FD6299C65CA00CE97B0 /* LocalFileFetcher.swift in Sources */,
 				D1878FA3299B76A700CE97B0 /* SceneDelegate.swift in Sources */,
+				D1DABE4529A1CE0A005A1353 /* NetworkingClientErrors.swift in Sources */,
 				D1878FC2299B77E100CE97B0 /* Saver.swift in Sources */,
 				D1A9B577299E0F5C007D20DE /* MenuTabBarUIComposer.swift in Sources */,
 				D1A9B57F299EE0DA007D20DE /* CatsViewController+MenuTabController.swift in Sources */,
