@@ -20,7 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
 
         let catsViewController = CatsUIComposer.compose()
-        let dogsViewController = DogsViewController(dogsService: DogsServiceImp())
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        let dogsViewController = DogsViewController(dogsService: DogsServiceImp(fetcher: URLSessionFetcher(urlRequestFactory: DogsEndpoint(), decodableResultAdapter: JSONDecoderResultAdapter(decoder: jsonDecoder))))
         
         let menuTabBarUIComposer = MenuTabBarUIComposer.composed(with: [catsViewController, dogsViewController])
         

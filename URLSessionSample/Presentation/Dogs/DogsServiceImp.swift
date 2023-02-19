@@ -9,22 +9,21 @@ import Foundation
 
 final class DogsServiceImp: DogsService {
     
-    init() { }
+    private let fetcher: AsyncFetcher
+    
+    init(fetcher: AsyncFetcher) {
+        self.fetcher = fetcher
+    }
     
     func getDogs() async throws -> [DogViewData] {
-        // TODO: Replace this mock data list with real data from the server.
-        let dogs = [DogViewData(breed: "Chihuahua", description: "This is mock data."),
-                DogViewData(breed: "Pastor Alemán", description: "This is mock data.")]
-        
-        // TODO: Handle this error with a better description.
-        guard !dogs.isEmpty else { throw NSError(domain: "Some error", code: 0, userInfo: [:]) }
-        
-        return dogs
+        let dogs: [Dog] = try await fetcher.fetchData()
+        let presentableDogs = mapToViewData(dogs)
+        return presentableDogs
     }
     
     func mapToViewData(_ dogs: [Dog]) -> [DogViewData] {
         dogs.map { DogViewData(breed: $0.breed,
-                               description: "\($0.short_description) \($0.size_info)") }
+                               description: "\($0.shortDescription) \($0.sizeInfo)") }
     }
 }
 

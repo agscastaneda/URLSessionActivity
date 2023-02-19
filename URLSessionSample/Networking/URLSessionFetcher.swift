@@ -17,6 +17,7 @@ final class URLSessionFetcher: Fetcher {
         self.decodableResultAdapter = decodableResultAdapter
     }
     
+    @available(*, renamed: "fetchData()")
     func fetchData<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
         do {
             let request = try urlRequestFactory.make()
@@ -32,6 +33,16 @@ final class URLSessionFetcher: Fetcher {
             dataTask.resume()
         } catch {
             completion(.failure(error))
+        }
+    }
+}
+
+extension URLSessionFetcher: AsyncFetcher {
+    func fetchData<T: Decodable>() async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            fetchData() { result in
+                continuation.resume(with: result)
+            }
         }
     }
 }

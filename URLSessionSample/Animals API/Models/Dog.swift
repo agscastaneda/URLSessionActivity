@@ -9,6 +9,6 @@
 struct Dog: Decodable {
     let id: String
     let breed: String
-    let short_description: String
-    let size_info: String
+    let shortDescription: String
+    let sizeInfo: String
 }
