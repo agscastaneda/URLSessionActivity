@@ -17,9 +17,9 @@ public final class JSONDecoderResultAdapter: DecodableResultAdapter {
         self.decoder = decoder
     }
     
-    public func mapModel<T: Decodable>(data: Data) throws -> T {
+    func mapModel<T: Decodable>(data: Data) throws -> T {
         guard let response = try? decoder.decode(T.self, from: data) else {
-            throw ModelDecodingError()
+            throw NetworkingClientErrors.decodingError
         }
         return response
     }

@@ -41,6 +41,11 @@
 		D1A9B581299EE103007D20DE /* DogsViewController+MenuTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */; };
 		D1A9B583299EF175007D20DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D1A9B582299EF175007D20DE /* README.md */; };
 		D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE130829A33628006622AE /* SimpleAlertFactory.swift */; };
+		D1D87F2729A2B04C007AE31D /* CatsServerErrorEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2629A2B04C007AE31D /* CatsServerErrorEndpoint.swift */; };
+		D1D87F2929A2BB71007AE31D /* DogsServerErrorEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2829A2BB71007AE31D /* DogsServerErrorEndpoint.swift */; };
+		D1D87F2B29A2BB94007AE31D /* DogsEmptyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2A29A2BB94007AE31D /* DogsEmptyEndpoint.swift */; };
+		D1D87F2D29A2BBA3007AE31D /* CatsEmptyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2C29A2BBA3007AE31D /* CatsEmptyEndpoint.swift */; };
+		D1D87F2F29A2BCFB007AE31D /* HTTPURLResponse+ResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2E29A2BCFB007AE31D /* HTTPURLResponse+ResponseCodes.swift */; };
 		D1DABE4529A1CE0A005A1353 /* NetworkingClientErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */; };
 		D1DABE4729A1CE1B005A1353 /* NetworkingServerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */; };
 		D1DABE4B29A1D0B5005A1353 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE4A29A1D0B5005A1353 /* Endpoint.swift */; };
@@ -88,6 +93,11 @@
 		D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogsViewController+MenuTabController.swift"; sourceTree = "<group>"; };
 		D1A9B582299EF175007D20DE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1FE130829A33628006622AE /* SimpleAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertFactory.swift; sourceTree = "<group>"; };
+		D1D87F2629A2B04C007AE31D /* CatsServerErrorEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsServerErrorEndpoint.swift; sourceTree = "<group>"; };
+		D1D87F2829A2BB71007AE31D /* DogsServerErrorEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsServerErrorEndpoint.swift; sourceTree = "<group>"; };
+		D1D87F2A29A2BB94007AE31D /* DogsEmptyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsEmptyEndpoint.swift; sourceTree = "<group>"; };
+		D1D87F2C29A2BBA3007AE31D /* CatsEmptyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsEmptyEndpoint.swift; sourceTree = "<group>"; };
+		D1D87F2E29A2BCFB007AE31D /* HTTPURLResponse+ResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+ResponseCodes.swift"; sourceTree = "<group>"; };
 		D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClientErrors.swift; sourceTree = "<group>"; };
 		D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServerErrors.swift; sourceTree = "<group>"; };
 		D1DABE4A29A1D0B5005A1353 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -193,6 +203,7 @@
 			children = (
 				D1DABE4429A1CE0A005A1353 /* NetworkingClientErrors.swift */,
 				D1DABE4629A1CE1B005A1353 /* NetworkingServerErrors.swift */,
+				D1D87F2E29A2BCFB007AE31D /* HTTPURLResponse+ResponseCodes.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -202,6 +213,10 @@
 			children = (
 				D1DABE4E29A1D34B005A1353 /* CatsEndpoint.swift */,
 				D1DABE5329A1DC63005A1353 /* DogsEndpoint.swift */,
+				D1D87F2629A2B04C007AE31D /* CatsServerErrorEndpoint.swift */,
+				D1D87F2829A2BB71007AE31D /* DogsServerErrorEndpoint.swift */,
+				D1D87F2A29A2BB94007AE31D /* DogsEmptyEndpoint.swift */,
+				D1D87F2C29A2BBA3007AE31D /* CatsEmptyEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -349,20 +364,24 @@
 				D1878FC0299B77D600CE97B0 /* DecodableResultAdapter.swift in Sources */,
 				D1878FC9299B7ABE00CE97B0 /* Cat.swift in Sources */,
 				D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */,
+				D1D87F2B29A2BB94007AE31D /* DogsEmptyEndpoint.swift in Sources */,
 				D1DABE5629A1DE17005A1353 /* AsyncFetcher.swift in Sources */,
 				D1878FD0299C464300CE97B0 /* CatsService.swift in Sources */,
 				D1878FA1299B76A700CE97B0 /* AppDelegate.swift in Sources */,
 				D1A9B56C299E0DBE007D20DE /* DogsServiceImp.swift in Sources */,
 				D1878FB6299B770A00CE97B0 /* URLSessionFetcher.swift in Sources */,
 				D1878FCB299B7BCA00CE97B0 /* Dog.swift in Sources */,
+				D1D87F2729A2B04C007AE31D /* CatsServerErrorEndpoint.swift in Sources */,
 				D1A9B56A299E0DAF007D20DE /* DogsViewController.swift in Sources */,
 				D1878FD2299C465100CE97B0 /* CatsServiceImp.swift in Sources */,
+				D1D87F2929A2BB71007AE31D /* DogsServerErrorEndpoint.swift in Sources */,
 				D1878FC5299B784000CE97B0 /* URLRequestFactory.swift in Sources */,
 				D1DABE5229A1DA84005A1353 /* MainThreadFetcherDecorator.swift in Sources */,
 				D1878FD4299C659A00CE97B0 /* JSONDecoderResultAdapter.swift in Sources */,
 				D1878FD8299C65F000CE97B0 /* UserDefaultsSaver.swift in Sources */,
 				D1A9B579299E104C007D20DE /* CatsUIComposer.swift in Sources */,
 				D1A9B56F299E0DE5007D20DE /* MenuTabBarController.swift in Sources */,
+				D1D87F2D29A2BBA3007AE31D /* CatsEmptyEndpoint.swift in Sources */,
 				D1A9B566299E0D8E007D20DE /* DogsService.swift in Sources */,
 				D1A9B571299E0E57007D20DE /* MenuTabBarViewModel.swift in Sources */,
 				D1878FB8299B771500CE97B0 /* Fetcher.swift in Sources */,
@@ -374,6 +393,7 @@
 				D1878FCD299C461D00CE97B0 /* CatViewData.swift in Sources */,
 				D1878FD6299C65CA00CE97B0 /* LocalFileFetcher.swift in Sources */,
 				D1878FA3299B76A700CE97B0 /* SceneDelegate.swift in Sources */,
+				D1D87F2F29A2BCFB007AE31D /* HTTPURLResponse+ResponseCodes.swift in Sources */,
 				D1DABE4529A1CE0A005A1353 /* NetworkingClientErrors.swift in Sources */,
 				D1878FC2299B77E100CE97B0 /* Saver.swift in Sources */,
 				D1A9B577299E0F5C007D20DE /* MenuTabBarUIComposer.swift in Sources */,

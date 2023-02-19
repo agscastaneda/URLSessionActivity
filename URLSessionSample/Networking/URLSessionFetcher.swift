@@ -22,11 +22,19 @@ final class URLSessionFetcher: Fetcher {
         do {
             let request = try urlRequestFactory.make()
             
-            // TODO: Handle server response errors.
             let dataTask = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
-                guard let self = self, let data = data else { return completion(.failure(NetworkingServerErrors.dataNotFound)) }
                 completion(Result {
-                    try self.decodableResultAdapter.mapModel(data: data)
+                    guard let self = self else { throw NetworkingClientErrors.lostReferenceSelf }
+                    
+                    if let error = error {
+                        throw error
+                    } else if let response = response as? HTTPURLResponse, response.isServerError {
+                        throw NetworkingServerErrors.internalServerError
+                    } else if let data = data, let response = response as? HTTPURLResponse, response.isOK {
+                        return try self.decodableResultAdapter.mapModel(data: data)
+                    } else {
+                        throw NetworkingServerErrors.dataNotFound
+                    }
                 })
             }
             

@@ -10,4 +10,5 @@ import Foundation
 enum NetworkingClientErrors: Error {
     case invalidURL
     case decodingError
+    case lostReferenceSelf
 }

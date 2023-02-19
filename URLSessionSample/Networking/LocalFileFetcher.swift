@@ -29,6 +29,7 @@ final class LocalFileFetcher: Fetcher {
         }
     
         guard let data = content.data(using: .utf8) else { return completion(.failure(NetworkingServerErrors.dataNotFound)) }
+
         completion(Result {
             try decodableResultAdapter.mapModel(data: data)
         })

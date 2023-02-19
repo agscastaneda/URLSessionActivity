@@ -10,4 +10,5 @@ import Foundation
 enum NetworkingServerErrors: Error {
     case internalServerError
     case dataNotFound
+    case unknownError
 }
