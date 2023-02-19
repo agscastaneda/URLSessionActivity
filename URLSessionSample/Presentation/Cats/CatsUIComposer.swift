@@ -13,10 +13,10 @@ final class CatsUIComposer {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let decoderResultsAdapter = JSONDecoderResultAdapter(decoder: decoder)
-        // TODO: Replace local fetching to API fetching.
-        let catsFetcher = LocalFileFetcher(fileName: "cats-v2", fileExtension: "json", decodableResultAdapter: decoderResultsAdapter)
+        let catsFetcher = URLSessionFetcher(urlRequestFactory: CatsEndpoint(), decodableResultAdapter: decoderResultsAdapter)
+        let mainFetcherDecorator = MainThreadFetcherDecorator(fetcher: catsFetcher)
         let favoriteCatsSaver = UserDefaultsSaver()
-        let catsService = CatsServiceImp(fetcher: catsFetcher, saver: favoriteCatsSaver)
+        let catsService = CatsServiceImp(fetcher: mainFetcherDecorator, saver: favoriteCatsSaver)
         let catsViewController = CatsViewController(catsService: catsService)
         return catsViewController
     }
