@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,7 +40,6 @@
 		D1A9B57F299EE0DA007D20DE /* CatsViewController+MenuTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A9B57E299EE0DA007D20DE /* CatsViewController+MenuTabController.swift */; };
 		D1A9B581299EE103007D20DE /* DogsViewController+MenuTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */; };
 		D1A9B583299EF175007D20DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D1A9B582299EF175007D20DE /* README.md */; };
-		D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE130829A33628006622AE /* SimpleAlertFactory.swift */; };
 		D1D87F2729A2B04C007AE31D /* CatsServerErrorEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2629A2B04C007AE31D /* CatsServerErrorEndpoint.swift */; };
 		D1D87F2929A2BB71007AE31D /* DogsServerErrorEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2829A2BB71007AE31D /* DogsServerErrorEndpoint.swift */; };
 		D1D87F2B29A2BB94007AE31D /* DogsEmptyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D87F2A29A2BB94007AE31D /* DogsEmptyEndpoint.swift */; };
@@ -54,6 +53,7 @@
 		D1DABE5229A1DA84005A1353 /* MainThreadFetcherDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE5129A1DA84005A1353 /* MainThreadFetcherDecorator.swift */; };
 		D1DABE5429A1DC63005A1353 /* DogsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE5329A1DC63005A1353 /* DogsEndpoint.swift */; };
 		D1DABE5629A1DE17005A1353 /* AsyncFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DABE5529A1DE17005A1353 /* AsyncFetcher.swift */; };
+		D1FE130929A33628006622AE /* SimpleAlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE130829A33628006622AE /* SimpleAlertFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +92,6 @@
 		D1A9B57E299EE0DA007D20DE /* CatsViewController+MenuTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatsViewController+MenuTabController.swift"; sourceTree = "<group>"; };
 		D1A9B580299EE103007D20DE /* DogsViewController+MenuTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogsViewController+MenuTabController.swift"; sourceTree = "<group>"; };
 		D1A9B582299EF175007D20DE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D1FE130829A33628006622AE /* SimpleAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertFactory.swift; sourceTree = "<group>"; };
 		D1D87F2629A2B04C007AE31D /* CatsServerErrorEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsServerErrorEndpoint.swift; sourceTree = "<group>"; };
 		D1D87F2829A2BB71007AE31D /* DogsServerErrorEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsServerErrorEndpoint.swift; sourceTree = "<group>"; };
 		D1D87F2A29A2BB94007AE31D /* DogsEmptyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsEmptyEndpoint.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		D1DABE5129A1DA84005A1353 /* MainThreadFetcherDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainThreadFetcherDecorator.swift; sourceTree = "<group>"; };
 		D1DABE5329A1DC63005A1353 /* DogsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsEndpoint.swift; sourceTree = "<group>"; };
 		D1DABE5529A1DE17005A1353 /* AsyncFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncFetcher.swift; sourceTree = "<group>"; };
+		D1FE130829A33628006622AE /* SimpleAlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +322,7 @@
 				};
 			};
 			buildConfigurationList = D1878F98299B76A700CE97B0 /* Build configuration list for PBXProject "URLSessionSample" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -546,6 +546,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,6 +574,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
